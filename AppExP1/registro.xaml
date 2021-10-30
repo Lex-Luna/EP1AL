@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppExP1.registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#088da5" Padding="10" CornerRadius="0">
+                <Label x:Name="txtEstudiante" HorizontalTextAlignment="Center" TextColor="Beige" FontSize="18"/>
+            </Frame>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Nombre" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="txtNombre" Placeholder="Ingrese" Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="Monto Inicial" Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="txtMonto" Placeholder="Ingrese Monto" Keyboard="Numeric" Grid.Row="1" Grid.Column="1"/>
+
+                <Label Text="Pago Mensual" Grid.Row="2" Grid.Column="0"/>
+                <Entry x:Name="txtMensual" IsReadOnly="True" Grid.Row="2" Grid.Column="1"/>
+                <Button x:Name="calcular" Text="Calcular" Clicked="calcular_Clicked" Grid.Row="2" Grid.Column="2"/>
+            </Grid>
+
+            <Button x:Name="guardar" Text="Guardar" Clicked="guardar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
